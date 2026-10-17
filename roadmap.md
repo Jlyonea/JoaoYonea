@@ -3,3 +3,10 @@
 - [x] Replace cards with open project-led layouts and expandable details.
 - [x] Add carousel covering all existing skills.
 - [x] Verify navigation, project details and carousel on desktop and mobile.
+
+# Navigation and motion updates
+- [x] Keep a floating menu with all links accessible.
+- [x] Replace the long work stack with progressive scroll-driven projects.
+- [x] Show more skills simultaneously and add automatic carousel motion.
+- [x] Add the requested desktop and mobile software service.
+- [x] Verify scroll transitions, navigation, automatic motion and service details.

@@ -12,3 +12,5 @@
 - Keep portfolio content in `src/lib/portfolio.ts` and derive the skills list from all career and project entries so every listed technology remains represented.
 - Use the existing Embla-based design-system carousel for skills and open editorial project sections with independent expandable details; this keeps touch navigation accessible without introducing a second control system.
 - Use the shared project-flow illustration component for factual input/process/output diagrams rather than presenting fabricated project screenshots.
+- Keep scroll-driven project presentation and skills motion in the browser-safe portfolio-motion component; progressive panels shorten the work section while retaining independent details and reduced-motion access.
+- Use the official Embla auto-scroll plugin for skills with pause, focus and pointer controls; shared carousel navigation remains the single interaction system.
