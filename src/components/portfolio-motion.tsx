@@ -65,7 +65,7 @@ export function SkillsCarousel() {
   const reduced = useReducedMotion();
   const [paused, setPaused] = useState(false);
   const [api, setApi] = useState<CarouselApi>();
-  const plugins = useMemo(() => [AutoScroll({ speed: 0.8, startDelay: 600, playOnInit: false, stopOnInteraction: false, stopOnMouseEnter: true, stopOnFocusIn: true })], []);
+  const plugins = useMemo(() => [AutoScroll({ speed: 0.8, startDelay: 600, playOnInit: false, stopOnInteraction: true, stopOnMouseEnter: true, stopOnFocusIn: true })], []);
   useEffect(() => {
     const motion = api?.plugins().autoScroll;
     if (!motion) return;
@@ -73,7 +73,8 @@ export function SkillsCarousel() {
     else motion.play();
   }, [api, reduced, paused]);
 
-  return <Carousel setApi={setApi} plugins={plugins} opts={{ align: 'start', loop: true, slidesToScroll: 1 }} aria-label="Skills carousel">
+  const resume = () => { if (!reduced && !paused) api?.plugins().autoScroll?.play(); };
+  return <Carousel setApi={setApi} plugins={plugins} opts={{ align: 'start', loop: true, slidesToScroll: 1 }} aria-label="Skills carousel" onMouseLeave={resume} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) resume(); }}>
     <div className="skills-heading"><h2>My stack.</h2><div className="carousel-controls">
       {!reduced && <Button variant="outline" size="icon" className="h-11 w-11 rounded-full" title={paused ? 'Play skills animation' : 'Pause skills animation'} aria-label={paused ? 'Play skills animation' : 'Pause skills animation'} onClick={() => setPaused(!paused)}>{paused ? <Play /> : <Pause />}</Button>}
       <CarouselPrevious title="Previous skill" aria-label="Previous skill" className="static translate-x-0 translate-y-0 h-11 w-11" /><CarouselNext title="Next skill" aria-label="Next skill" className="static translate-x-0 translate-y-0 h-11 w-11" />
