@@ -1,5 +1,5 @@
 import { Bot, Plug, Layers, Database, Sparkles, MonitorSmartphone } from "lucide-react";
-import automateImage from '@/assets/automate-team.jpeg.asset.json';
+import automateImage from '@/assets/automate-team-clean.png';
 import smarterappImage from '@/assets/smarterapp-application.png.asset.json';
 import adpImage from '@/assets/adp-team.jpeg.asset.json';
 
@@ -13,9 +13,9 @@ export const services = [
 ];
 
 export const career = [
-  { company: "Automate", image: automateImage.url, imageAlt: "Automate team gathering", imageKind: "photo", role: "Full-stack Web and APIs Development", text: "I worked as a full-stack developer, handling all stages of ERP web system development — from front-end to back-end, implementation, maintenance, system optimization, and performing post-implementation testing.", skills: ["C#", "JavaScript", "jQuery", "HTML", "CSS", "SQL Server", "Azure DevOps", "Entity Framework"] },
-  { company: "SmarterApp", image: smarterappImage.url, imageAlt: "Rapiduu mobile application sign-in screen from my work at SmarterApp", imageKind: "app", role: "Software Engineering", text: "Worked on business-focused web applications such as e-commerces and CRMs, mobile applications, APIs and AI-based automation software.", skills: ["C#", "JavaScript", "HTML", "CSS", "SQL Server", "Azure DevOps", "Dapper", "VB.NET", ".NET MAUI", "PostgreSQL", "CI/CD", "Google Firebase"] },
-  { company: "ADP", image: adpImage.url, imageAlt: "ADP team group selfie outdoors", imageKind: "photo", role: "RPA Development & Backend Automation", text: "Develop and maintain RPA solutions using C# and Selenium, investigate automation failures, support robots in production, and work with SQL Server as part of the development and maintenance process.", skills: ["C#", "JavaScript", "HTML", "Selenium", "Browser automation", "Entity Framework", "SQL Server"] },
+  { company: "Automate", image: automateImage, imageAlt: "Automate team gathering", imageKind: "photo", role: "Full-stack Web and APIs Development", text: "A startup focused on automating Microsoft product sales and developing an ERP with multi-store integration. I worked as a full-stack developer, handling all stages of ERP web system development — from front-end to back-end, implementation, maintenance, system optimization, and post-implementation testing.", skills: ["C#", "JavaScript", "jQuery", "HTML", "CSS", "SQL Server", "Azure DevOps", "Entity Framework"] },
+  { company: "SmarterApp", image: smarterappImage.url, imageAlt: "Rapiduu mobile application sign-in screen from my work at SmarterApp", imageKind: "app", role: "Software Engineering", text: "A hub for custom software tailored to each client's requirements. My experience went beyond web e-commerce and CRM applications: I developed AI-based software from scratch, built APIs, and created mobile applications designed entirely around each client's needs.", skills: ["C#", "JavaScript", "HTML", "CSS", "SQL Server", "Azure DevOps", "Dapper", "VB.NET", ".NET MAUI", "PostgreSQL", "CI/CD", "Google Firebase"] },
+  { company: "ADP", image: adpImage.url, imageAlt: "ADP team group selfie outdoors", imageKind: "photo", role: "RPA Development & Backend Automation", text: "A multinational and global leader in payroll and human resources solutions. I had the opportunity to work with RPA (Robotic Process Automation), creating robots from scratch using C# and Selenium to replace manual work with efficiency and speed. I also maintained production robots, investigated automation failures, and worked with SQL Server throughout development and maintenance.", skills: ["C#", "JavaScript", "HTML", "Selenium", "Browser automation", "Entity Framework", "SQL Server"] },
 ];
 
 export const projects = [

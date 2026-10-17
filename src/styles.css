@@ -186,11 +186,13 @@ h2 { font-size: 48px; line-height: 1.12; }
 .service-plus { width: 20px; margin-left: auto; flex-shrink: 0; transition: transform .2s; }
 .service-list details[open] .service-plus { transform: rotate(45deg); }
 .service-list details > p { max-width: 740px; margin: 0 0 26px 46px; line-height: 1.8; color: var(--muted-foreground); }
-.career-list li { display: grid; grid-template-columns: 1fr 2fr; gap: 48px; padding-block: 32px; border-top: 1px solid var(--border); }
-.career-company { display: flex; align-items: baseline; gap: 24px; }
+.career-list li { display: grid; grid-template-columns: 1fr 1.25fr; gap: 24px 56px; padding-block: 36px 44px; border-top: 1px solid var(--border); }
+.career-company { grid-column: 1 / -1; display: flex; align-items: baseline; gap: 24px; }
 .career-company h3 { font-size: 30px; }
-.career-image { display: block; width: 100%; height: auto; margin-top: 24px; border-radius: var(--radius); }
-.career-image-app { width: auto; max-width: 100%; height: 300px; object-fit: contain; object-position: left; }
+.career-media { height: 300px; display: flex; align-items: center; justify-content: center; min-width: 0; }
+.career-image { display: block; max-width: 100%; max-height: 100%; width: auto; height: auto; border-radius: var(--radius); object-fit: contain; }
+.career-media-app .career-image { height: 100%; }
+.career-description { align-self: center; min-width: 0; }
 .career-list h4 { color: var(--primary); margin-bottom: 14px; font-size: 15px; }
 .career-list p { color: var(--muted-foreground); line-height: 1.8; font-size: 15px; }
 .career-list .career-skills { margin-top: 18px; font-family: var(--font-mono); font-size: 11px; }
@@ -242,6 +244,7 @@ h2 { font-size: 48px; line-height: 1.12; }
   .service-list h3 { font-size: 20px; }
   .service-list details > p { margin-left: 36px; font-size: 14px; }
   .career-list li { grid-template-columns: 1fr; gap: 20px; }
+  .career-media { height: 260px; }
   .footer-arrow { width: 52px; height: 52px; flex-shrink: 0; }
   .footer-main h2 { font-size: 30px; }
   .footer-bottom,.footer-bottom > div { flex-direction: column; gap: 16px; }
