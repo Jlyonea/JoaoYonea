@@ -14,3 +14,8 @@
 # Minimalist top menu
 - [x] Remove the boxed container and side borders from the top menu, keeping links floating and clickable.
 - [x] Verify legibility over scrolling content and anchor offsets on desktop and mobile.
+
+# Work tabs and stack strip
+- [ ] Make the work section switch only by clicking the tabs, and repair the broken layout.
+- [ ] Replace the skills section with a smaller "my stack" strip of compact cards running between other sections.
+- [ ] Update tests for click-only tabs and the compact stack strip, then verify on desktop and mobile.
