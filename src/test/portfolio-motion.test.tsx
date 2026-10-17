@@ -56,4 +56,17 @@ describe('Portfolio motion', () => {
     expect(screen.getByTestId('project-2')).not.toBeVisible();
     expect(screen.getAllByRole('tab')).toHaveLength(3);
   });
+
+  it('switches the visible project only when a tab is clicked', () => {
+    render(<WorkSequence renderProject={(_project, index) => <div data-testid={`project-${index}`} />} />);
+    expect(screen.getByTestId('project-0')).toBeVisible();
+    fireEvent.click(screen.getByRole('tab', { name: /RPA development/ }));
+    expect(screen.getByTestId('project-1')).toBeVisible();
+    expect(screen.getByTestId('project-0')).not.toBeVisible();
+    expect(screen.getByTestId('project-2')).not.toBeVisible();
+    fireEvent.click(screen.getByRole('tab', { name: /E-commerce/ }));
+    expect(screen.getByTestId('project-2')).toBeVisible();
+    expect(screen.getByTestId('project-1')).not.toBeVisible();
+    expect(screen.getByRole('tab', { name: /E-commerce/ })).toHaveAttribute('aria-selected', 'true');
+  });
 });
