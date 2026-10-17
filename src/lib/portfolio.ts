@@ -1,9 +1,10 @@
-import { Bot, Plug, Layers, Database, Sparkles } from "lucide-react";
+import { Bot, Plug, Layers, Database, Sparkles, MonitorSmartphone } from "lucide-react";
 
 export const services = [
   { icon: Bot, title: "Browser Automation & RPA", text: "Develop and maintain browser-based automation using C# and Selenium. Automate repetitive workflows, troubleshoot existing robots, and improve the reliability of automated processes." },
   { icon: Plug, title: "APIs & Integrations", text: "Implement and support APIs, connect applications to external services, process data, and troubleshoot integration issues." },
   { icon: Layers, title: "Full-stack Web Development", text: "Develop new features, maintain existing functionality, implement business rules, investigate bugs, and work with frontend, backend, and database components." },
+  { icon: MonitorSmartphone, title: "Desktop and Mobile Softwares", text: "Develop desktop and mobile software end to end, tailored to each client’s requirements — from understanding the demand and planning the solution to design, development, integrations, testing, deployment, and ongoing maintenance." },
   { icon: Database, title: "SQL & Data", text: "Write and maintain SQL queries, investigate data inconsistencies, support database changes, and improve data processing workflows." },
   { icon: Sparkles, title: "AI-powered Workflows", text: "Develop software workflows that use AI to support information classification, task assignment, and reporting, based on business requirements." },
 ];

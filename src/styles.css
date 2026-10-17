@@ -111,7 +111,7 @@
   }
 }
 
-html { scroll-behavior: smooth; scroll-padding-top: 28px; }
+html { scroll-behavior: smooth; scroll-padding-top: 112px; }
 body { margin: 0; }
 * { letter-spacing: 0; }
 ::selection { background: var(--primary); color: var(--background); }
@@ -120,11 +120,11 @@ a:hover { color: var(--primary); }
 .page-width { width: min(1160px, calc(100% - 96px)); margin-inline: auto; }
 h1,h2,h3 { font-family: var(--font-display); font-weight: 500; }
 h2 { font-size: 48px; line-height: 1.12; }
-.site-header { height: 96px; display: flex; justify-content: space-between; align-items: center; border-bottom: 1px solid var(--border); }
+.site-header { position: fixed; z-index: 50; top: 16px; left: 50%; transform: translateX(-50%); height: 68px; padding-inline: 24px; display: flex; justify-content: space-between; align-items: center; border: 1px solid var(--border); border-radius: 8px; background: color-mix(in oklch, var(--background) 92%, transparent); backdrop-filter: blur(16px); }
 .wordmark { font-family: var(--font-display); font-size: 32px; font-weight: 700; }
 .site-header nav { display: flex; align-items: center; gap: 32px; font-size: 14px; }
 .contact-nav { padding-right: 0; }
-.intro { padding-top: 64px; }
+.intro { padding-top: 160px; }
 .intro-kicker,.intro-foot,.section-label,.flow-heading,.flow-caption,.skill-index,.project-meta { font-family: var(--font-mono); font-size: 11px; }
 .intro-kicker { display: flex; align-items: center; gap: 12px; color: var(--muted-foreground); }
 .status-dot,.flow-dot { width: 6px; height: 6px; border-radius: 50%; background: var(--primary); display: inline-block; flex-shrink: 0; }
@@ -141,6 +141,16 @@ h2 { font-size: 48px; line-height: 1.12; }
 .section-heading { display: flex; align-items: flex-end; justify-content: space-between; gap: 32px; margin-bottom: 60px; }
 .section-heading > p { font-size: 14px; line-height: 1.7; color: var(--muted-foreground); }
 .project-entry { border-top: 1px solid var(--border); padding-block: 36px 44px; }
+.work-track { --work-top: 104px; position: relative; padding-bottom: 420px; }
+.work-stage { position: sticky; top: var(--work-top); background: var(--background); }
+.work-selector { display: flex; border-top: 1px solid var(--border); }
+.work-step { flex: 1; min-width: 0; justify-content: flex-start; height: 54px; gap: 16px; border-radius: 0; color: var(--muted-foreground); border-bottom: 2px solid transparent; }
+.work-step span:first-child { font-family: var(--font-mono); font-size: 12px; }
+.work-step[aria-selected="true"] { color: var(--primary); border-bottom-color: var(--primary); }
+.work-panel:not([hidden]) { animation: work-in 420ms ease both; }
+.work-panel .project-entry { min-height: 360px; }
+.work-reduced { padding-bottom: 0; }
+.work-reduced .work-stage { position: static; }
 .project-meta { display: flex; align-items: center; gap: 24px; color: var(--muted-foreground); margin-bottom: 30px; }
 .project-number { color: var(--primary); font-size: 16px; }
 .project-main { display: grid; grid-template-columns: 1.1fr 1fr; gap: 56px; align-items: center; }
@@ -164,10 +174,10 @@ h2 { font-size: 48px; line-height: 1.12; }
 .flow-caption { display: flex; justify-content: space-around; color: var(--muted-foreground); font-size: 9px; }
 .skills-heading { display: flex; justify-content: space-between; align-items: center; margin-bottom: 48px; }
 .carousel-controls { display: flex; gap: 12px; }
-.skill-item { border-left: 1px solid var(--border); padding: 0 20px; min-height: 200px; }
+.skill-item { border-left: 1px solid var(--border); padding: 0 16px; min-height: 190px; }
 .skill-index { color: var(--muted-foreground); }
 .skill-item > svg { width: 36px; height: 36px; color: var(--primary); margin-block: 28px 20px; }
-.skill-item h3 { font-size: 23px; line-height: 1.3; overflow-wrap: anywhere; }
+.skill-item h3 { font-size: 19px; line-height: 1.3; overflow-wrap: anywhere; }
 .service-list details { border-top: 1px solid var(--border); }
 .service-list details:last-child { border-bottom: 1px solid var(--border); }
 .service-list summary { display: flex; align-items: center; gap: 24px; padding-block: 26px; cursor: pointer; list-style: none; }
@@ -190,14 +200,15 @@ h2 { font-size: 48px; line-height: 1.12; }
 .footer-bottom > div { display: flex; gap: 24px; }
 .footer-bottom a { display: inline-flex; gap: 8px; align-items: center; }
 @keyframes details-in { from { opacity: 0; transform: translateY(6px); } to { opacity: 1; transform: translateY(0); } }
-@media (min-width: 1600px) { .intro { padding-top: 80px; } .intro h1 { font-size: 128px; } }
+@keyframes work-in { from { opacity: 0; transform: translateY(24px); } to { opacity: 1; transform: translateY(0); } }
+@media (min-width: 1600px) { .intro { padding-top: 176px; } .intro h1 { font-size: 128px; } }
 @media (max-width: 767px) {
   .page-width { width: calc(100% - 40px); }
-  .site-header { height: 76px; }
-  .site-header nav { gap: 16px; font-size: 12px; }
-  .site-header nav > a:nth-child(3) { display: none; }
+  .site-header { top: 10px; height: 62px; padding-inline: 12px; width: calc(100% - 20px); }
+  .wordmark { font-size: 24px; }
+  .site-header nav { gap: 10px; font-size: 11px; }
   .contact-nav { font-size: 12px; padding-left: 0; }
-  .intro { padding-top: 38px; }
+  .intro { padding-top: 110px; }
   .intro-kicker { font-size: 9px; line-height: 1.6; }
   .intro h1 { font-size: 64px; margin-block: 28px; }
   .intro-bottom { display: block; }
@@ -211,12 +222,23 @@ h2 { font-size: 48px; line-height: 1.12; }
   .section-heading { display: block; margin-bottom: 36px; }
   .section-heading > p { margin-top: 20px; }
   .project-main { grid-template-columns: 1fr; gap: 28px; }
+  .work-track { --work-top: 88px; padding-bottom: 300px; }
+  .work-step { gap: 8px; font-size: 11px; padding-inline: 8px; white-space: normal; line-height: 1.3; }
+  .work-panel .project-entry { min-height: 0; padding-block: 22px; }
+  .work-panel .project-main { gap: 18px; }
+  .work-panel .project-main h3 { font-size: 24px; }
+  .work-panel .project-outcome { font-size: 13px; margin-top: 14px; }
+  .work-panel .project-meta { margin-bottom: 18px; }
+  .work-panel .project-flow { padding-block: 18px; }
+  .work-panel .flow-nodes { margin-block: 22px 12px; }
+  .work-panel .project-details { max-height: 220px; overflow-y: auto; margin-top: 20px; }
+  .work-reduced { padding-bottom: 0; }
   .project-main h3 { font-size: 28px; }
   .project-meta { gap: 16px; font-size: 10px; }
   .project-details { grid-template-columns: 1fr; gap: 24px; }
   .flow-nodes { margin-block: 32px 20px; }
-  .skill-item { padding-inline: 14px; }
-  .skill-item h3 { font-size: 20px; }
+  .skill-item { padding-inline: 8px; }
+  .skill-item h3 { font-size: 16px; }
   .service-list summary { gap: 14px; }
   .service-list h3 { font-size: 20px; }
   .service-list details > p { margin-left: 36px; font-size: 14px; }
