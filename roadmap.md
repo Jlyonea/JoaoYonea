@@ -19,3 +19,8 @@
 - [x] Make the work section switch only by clicking the tabs, and repair the broken layout.
 - [x] Replace the skills section with a smaller "my stack" strip of compact cards running between other sections.
 - [x] Update tests for click-only tabs and the compact stack strip, then verify on desktop and mobile.
+
+# Career images and E-commerce contributions
+- [ ] Add the uploaded images to Automate, SmarterApp and ADP in the requested order.
+- [ ] Add the three E-commerce contributions in English.
+- [ ] Verify the images and expanded project details on desktop and mobile.

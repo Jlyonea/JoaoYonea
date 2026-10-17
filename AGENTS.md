@@ -14,3 +14,4 @@
 - Use the shared project-flow illustration component for factual input/process/output diagrams rather than presenting fabricated project screenshots.
 - Keep scroll-driven project presentation and skills motion in the browser-safe portfolio-motion component; progressive panels shorten the work section while retaining independent details and reduced-motion access.
 - Use the official Embla auto-scroll plugin for skills with pause, focus and pointer controls; shared carousel navigation remains the single interaction system.
+- Store employer image references and descriptive alternative text with career entries in the portfolio content module; preserve full images so team members and application screens remain visible.
