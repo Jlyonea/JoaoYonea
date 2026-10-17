@@ -38,7 +38,7 @@ export function SkillsCarousel() {
   }, [api, reduced, paused]);
 
   const resume = () => { if (!reduced && !paused) api?.plugins().autoScroll?.play(); };
-  return <div className="stack-wrap">
+  return <Carousel setApi={setApi} plugins={plugins} opts={{ align: 'start', loop: true, slidesToScroll: 1 }} aria-label="Skills carousel" className="stack-wrap" onMouseLeave={resume} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) resume(); }}>
     <div className="stack-top">
       <p className="stack-title"><strong>My stack.</strong> Tools I use to build and keep systems running.</p>
       <div className="carousel-controls">
@@ -47,8 +47,6 @@ export function SkillsCarousel() {
         <CarouselNext title="Next skill" aria-label="Next skill" className="static translate-x-0 translate-y-0 h-8 w-8" />
       </div>
     </div>
-    <Carousel setApi={setApi} plugins={plugins} opts={{ align: 'start', loop: true, slidesToScroll: 1 }} aria-label="Skills carousel" onMouseLeave={resume} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) resume(); }}>
-      <CarouselContent className="-ml-2">{skills.map((skill) => <CarouselItem key={skill} className="basis-auto pl-2"><span className="stack-chip">{skill}</span></CarouselItem>)}</CarouselContent>
-    </Carousel>
-  </div>;
+    <CarouselContent className="-ml-2">{skills.map((skill) => <CarouselItem key={skill} className="basis-auto pl-2"><span className="stack-chip">{skill}</span></CarouselItem>)}</CarouselContent>
+  </Carousel>;
 }
