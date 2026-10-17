@@ -1,4 +1,7 @@
 import { Bot, Plug, Layers, Database, Sparkles, MonitorSmartphone } from "lucide-react";
+import automateImage from '@/assets/automate-team.jpeg.asset.json';
+import smarterappImage from '@/assets/smarterapp-application.png.asset.json';
+import adpImage from '@/assets/adp-team.jpeg.asset.json';
 
 export const services = [
   { icon: Bot, title: "Browser Automation & RPA", text: "Develop and maintain browser-based automation using C# and Selenium. Automate repetitive workflows, troubleshoot existing robots, and improve the reliability of automated processes." },
@@ -10,9 +13,9 @@ export const services = [
 ];
 
 export const career = [
-  { company: "Automate", role: "Full-stack Web and APIs Development", text: "I worked as a full-stack developer, handling all stages of ERP web system development — from front-end to back-end, implementation, maintenance, system optimization, and performing post-implementation testing.", skills: ["C#", "JavaScript", "jQuery", "HTML", "CSS", "SQL Server", "Azure DevOps", "Entity Framework"] },
-  { company: "SmarterApp", role: "Software Engineering", text: "Worked on business-focused web applications such as e-commerces and CRMs, mobile applications, APIs and AI-based automation software.", skills: ["C#", "JavaScript", "HTML", "CSS", "SQL Server", "Azure DevOps", "Dapper", "VB.NET", ".NET MAUI", "PostgreSQL", "CI/CD", "Google Firebase"] },
-  { company: "ADP", role: "RPA Development & Backend Automation", text: "Develop and maintain RPA solutions using C# and Selenium, investigate automation failures, support robots in production, and work with SQL Server as part of the development and maintenance process.", skills: ["C#", "JavaScript", "HTML", "Selenium", "Browser automation", "Entity Framework", "SQL Server"] },
+  { company: "Automate", image: automateImage.url, imageAlt: "Automate team gathering", imageKind: "photo", role: "Full-stack Web and APIs Development", text: "I worked as a full-stack developer, handling all stages of ERP web system development — from front-end to back-end, implementation, maintenance, system optimization, and performing post-implementation testing.", skills: ["C#", "JavaScript", "jQuery", "HTML", "CSS", "SQL Server", "Azure DevOps", "Entity Framework"] },
+  { company: "SmarterApp", image: smarterappImage.url, imageAlt: "Rapiduu mobile application sign-in screen from my work at SmarterApp", imageKind: "app", role: "Software Engineering", text: "Worked on business-focused web applications such as e-commerces and CRMs, mobile applications, APIs and AI-based automation software.", skills: ["C#", "JavaScript", "HTML", "CSS", "SQL Server", "Azure DevOps", "Dapper", "VB.NET", ".NET MAUI", "PostgreSQL", "CI/CD", "Google Firebase"] },
+  { company: "ADP", image: adpImage.url, imageAlt: "ADP team group selfie outdoors", imageKind: "photo", role: "RPA Development & Backend Automation", text: "Develop and maintain RPA solutions using C# and Selenium, investigate automation failures, support robots in production, and work with SQL Server as part of the development and maintenance process.", skills: ["C#", "JavaScript", "HTML", "Selenium", "Browser automation", "Entity Framework", "SQL Server"] },
 ];
 
 export const projects = [
@@ -34,6 +37,7 @@ export const projects = [
   {
     title: "New Era Brasil E-Commerce",
     tag: "Business application · E-commerce",
+    contribution: ["Maintained and improved existing screens.", "Created APIs to populate and manage data.", "Developed dynamic components for multi-store clients."],
     context: "General maintenance of the web application: fixing front-end bugs and layout problems, building solutions for the surrounding APIs and implementing new features — including a dynamic categories menu that administrators configure from a back-office app, showing categories and sub-categories on hover.",
     outcome: "Better user experience, faster loading during navigation and new features for both the company and its customers.",
   },
