@@ -10,3 +10,7 @@
 - [x] Show more skills simultaneously and add automatic carousel motion.
 - [x] Add the requested desktop and mobile software service.
 - [x] Verify scroll transitions, navigation, automatic motion and service details.
+
+# Minimalist top menu
+- [x] Remove the boxed container and side borders from the top menu, keeping links floating and clickable.
+- [x] Verify legibility over scrolling content and anchor offsets on desktop and mobile.
