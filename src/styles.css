@@ -120,8 +120,8 @@ a:hover { color: var(--primary); }
 .page-width { width: min(1160px, calc(100% - 96px)); margin-inline: auto; }
 h1,h2,h3 { font-family: var(--font-display); font-weight: 500; }
 h2 { font-size: 48px; line-height: 1.12; }
-.site-header { position: fixed; z-index: 50; top: 0; left: 0; right: 0; height: 78px; padding-inline: max(28px, calc((100% - 1160px) / 2)); display: flex; justify-content: space-between; align-items: center; }
-.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(to bottom, color-mix(in oklch, var(--background) 92%, transparent) 30%, transparent); backdrop-filter: blur(14px); -webkit-backdrop-filter: blur(14px); -webkit-mask-image: linear-gradient(to bottom, #000 40%, transparent); mask-image: linear-gradient(to bottom, #000 40%, transparent); }
+.site-header { position: fixed; z-index: 50; top: 0; left: 0; right: 0; height: 84px; padding-inline: max(28px, calc((100% - 1160px) / 2)); display: flex; justify-content: space-between; align-items: center; }
+.site-header::before { content: ""; position: absolute; inset: 0; z-index: -1; pointer-events: none; background: linear-gradient(to bottom, color-mix(in oklch, var(--background) 94%, transparent) 45%, transparent); backdrop-filter: blur(18px); -webkit-backdrop-filter: blur(18px); -webkit-mask-image: linear-gradient(to bottom, #000 55%, transparent); mask-image: linear-gradient(to bottom, #000 55%, transparent); }
 .wordmark { font-family: var(--font-display); font-size: 32px; font-weight: 700; }
 .site-header nav { display: flex; align-items: center; gap: 32px; font-size: 14px; }
 .contact-nav { padding-right: 0; }
