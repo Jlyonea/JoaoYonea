@@ -21,6 +21,6 @@
 - [x] Update tests for click-only tabs and the compact stack strip, then verify on desktop and mobile.
 
 # Career images and E-commerce contributions
-- [ ] Add the uploaded images to Automate, SmarterApp and ADP in the requested order.
-- [ ] Add the three E-commerce contributions in English.
-- [ ] Verify the images and expanded project details on desktop and mobile.
+- [x] Add the uploaded images to Automate, SmarterApp and ADP in the requested order.
+- [x] Add the three E-commerce contributions in English.
+- [x] Verify the images and expanded project details on desktop and mobile.
