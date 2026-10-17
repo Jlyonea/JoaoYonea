@@ -30,6 +30,7 @@ export function WorkSequence({ renderProject }: { renderProject: (project: typeo
       if (!track.current) return;
       const top = parseFloat(getComputedStyle(track.current).getPropertyValue('--work-top'));
       const distance = parseFloat(getComputedStyle(track.current).paddingBottom);
+      if (!Number.isFinite(top) || !Number.isFinite(distance) || distance <= 0) return;
       const progress = Math.max(0, Math.min(1, (top - track.current.getBoundingClientRect().top) / distance));
       setActive(Math.min(projects.length - 1, Math.floor(progress * projects.length)));
     };
@@ -49,6 +50,7 @@ export function WorkSequence({ renderProject }: { renderProject: (project: typeo
     const style = getComputedStyle(track.current);
     const top = parseFloat(style.getPropertyValue('--work-top'));
     const distance = parseFloat(style.paddingBottom);
+    if (!Number.isFinite(top) || !Number.isFinite(distance) || distance <= 0) return;
     setActive(index);
     window.scrollTo({ top: window.scrollY + track.current.getBoundingClientRect().top - top + distance * (index / projects.length + 0.04), behavior: 'smooth' });
   };

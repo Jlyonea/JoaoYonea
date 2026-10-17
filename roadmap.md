@@ -5,8 +5,8 @@
 - [x] Verify navigation, project details and carousel on desktop and mobile.
 
 # Navigation and motion updates
-- [ ] Keep a floating menu with all links accessible.
-- [ ] Replace the long work stack with progressive scroll-driven projects.
-- [ ] Show more skills simultaneously and add automatic carousel motion.
-- [ ] Add the requested desktop and mobile software service.
-- [ ] Verify scroll transitions, navigation, automatic motion and service details.
+- [x] Keep a floating menu with all links accessible.
+- [x] Replace the long work stack with progressive scroll-driven projects.
+- [x] Show more skills simultaneously and add automatic carousel motion.
+- [x] Add the requested desktop and mobile software service.
+- [x] Verify scroll transitions, navigation, automatic motion and service details.
