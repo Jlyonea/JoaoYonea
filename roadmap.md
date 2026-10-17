@@ -16,6 +16,6 @@
 - [x] Verify legibility over scrolling content and anchor offsets on desktop and mobile.
 
 # Work tabs and stack strip
-- [ ] Make the work section switch only by clicking the tabs, and repair the broken layout.
-- [ ] Replace the skills section with a smaller "my stack" strip of compact cards running between other sections.
-- [ ] Update tests for click-only tabs and the compact stack strip, then verify on desktop and mobile.
+- [x] Make the work section switch only by clicking the tabs, and repair the broken layout.
+- [x] Replace the skills section with a smaller "my stack" strip of compact cards running between other sections.
+- [x] Update tests for click-only tabs and the compact stack strip, then verify on desktop and mobile.
