@@ -24,3 +24,8 @@
 - [x] Add the uploaded images to Automate, SmarterApp and ADP in the requested order.
 - [x] Add the three E-commerce contributions in English.
 - [x] Verify the images and expanded project details on desktop and mobile.
+
+# Career presentation refinements
+- [ ] Remove the dark 1/7 badge from the Automate photo.
+- [ ] Balance landscape and portrait employer images without cropping their contents.
+- [ ] Expand all three employer descriptions in English and verify the presentation.
