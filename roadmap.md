@@ -26,6 +26,6 @@
 - [x] Verify the images and expanded project details on desktop and mobile.
 
 # Career presentation refinements
-- [ ] Remove the dark 1/7 badge from the Automate photo.
-- [ ] Balance landscape and portrait employer images without cropping their contents.
-- [ ] Expand all three employer descriptions in English and verify the presentation.
+- [x] Remove the dark 1/7 badge from the Automate photo.
+- [x] Balance landscape and portrait employer images without cropping their contents.
+- [x] Expand all three employer descriptions in English and verify the presentation.
