@@ -40,7 +40,7 @@ function Index() {
     <header className="site-header page-width"><a href="#top" className="wordmark">JY<span className="text-primary">.</span></a><nav aria-label="Main navigation"><a href="#projects">Work</a><a href="#skills">Skills</a><a href="#career">Experience</a><Button asChild variant="link" className="contact-nav"><a href="mailto:jlyonea@hotmail.com">Let’s talk <ArrowUpRight /></a></Button></nav></header>
     <section id="top" className="intro page-width">
       <div className="intro-kicker"><span className="status-dot" /> FULL-STACK SOFTWARE DEVELOPER · 5+ YEARS OF EXPERIENCE</div>
-      <h1>João Lucas<br /><span className="text-primary">Yonea<span className="text-foreground">.</span></span></h1>
+      <h1>João<br /><span className="text-primary">Yonea<span className="text-foreground">.</span></span></h1>
       <div className="intro-bottom"><div><p className="intro-title">Business challenges.<br />Practical software solutions.</p><p className="intro-copy">I build what each customer needs — web applications, APIs, desktop and mobile software or automations — all to keep businesses moving.</p></div><Button asChild variant="outline" className="work-link"><a href="#projects">Explore my work <ArrowDown /></a></Button></div>
       <div className="intro-foot"><span>FULL-STACK / RPA / AI AUTOMATION</span><span>SELECTED WORK BELOW <ArrowDown size={13} /></span></div>
     </section>
