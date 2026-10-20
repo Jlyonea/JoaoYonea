@@ -24,6 +24,9 @@ jobs:
           bun-version: latest
       - run: bun install
       - run: bun run build
+        env:
+          # Repo name on GitHub Pages: https://<user>.github.io/JoaoYonea/
+          GITHUB_PAGES_BASE: /JoaoYonea/
       - uses: actions/configure-pages@v5
       - name: Determine output folder
         id: output_dir
