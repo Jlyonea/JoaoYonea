@@ -29,3 +29,8 @@
 - [x] Remove the dark 1/7 badge from the Automate photo.
 - [x] Balance landscape and portrait employer images without cropping their contents.
 - [x] Expand all three employer descriptions in English and verify the presentation.
+
+# Copy and positioning updates
+- [x] Present the SmarterApp role as Full-stack Software Engineering.
+- [x] Expand the RPA, APIs, full-stack and SQL service texts with the requested details, and update the hero title and intro copy.
+- [x] Verify the new wording on desktop and mobile.
