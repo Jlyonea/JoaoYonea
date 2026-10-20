@@ -1,7 +1,7 @@
 import { Bot, Plug, Layers, Database, Sparkles, MonitorSmartphone } from "lucide-react";
 import automateImage from '@/assets/automate-team-clean.png';
-import smarterappImage from '@/assets/smarterapp-application.png.asset.json';
-import adpImage from '@/assets/adp-team.jpeg.asset.json';
+import smarterappImage from '@/assets/smarterapp-application.png';
+import adpImage from '@/assets/adp-team.jpeg';
 
 export const services = [
   { icon: Bot, title: "Browser Automation & RPA", text: "Develop and maintain browser-based automation using C# and Selenium. Build robots that replace a high volume of manual human work, automate repetitive workflows, troubleshoot existing robots, and improve the reliability of automated processes — including integrations with external APIs such as Microsoft Graph API." },
