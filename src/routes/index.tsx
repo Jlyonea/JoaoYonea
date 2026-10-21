@@ -37,7 +37,7 @@ function Project({ project, index }: { project: typeof projects[number]; index: 
 
 function Index() {
   return <main className="font-sans">
-    <header className="site-header page-width"><a href="#top" className="wordmark">JY<span className="text-primary">.</span></a><nav aria-label="Main navigation"><a href="#projects">Work</a><a href="#skills">Skills</a><a href="#career">Experience</a><Button asChild variant="link" className="contact-nav"><a href="mailto:jlyonea@hotmail.com">Let’s talk <ArrowUpRight /></a></Button></nav></header>
+    <header className="site-header">
     <section id="top" className="intro page-width">
       <div className="intro-kicker"><span className="status-dot" /> FULL-STACK SOFTWARE DEVELOPER · 5+ YEARS OF EXPERIENCE</div>
       <h1>João<br /><span className="text-primary">Yonea<span className="text-foreground">.</span></span></h1>
