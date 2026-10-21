@@ -262,7 +262,7 @@ h2 { font-size: 48px; line-height: 1.12; }
   .flow-nodes { margin-block: 32px 20px; }
   .stack-top { flex-direction: column; align-items: flex-start; gap: 12px; margin-bottom: 14px; }
   .stack-chip { padding: 5px 11px; font-size: 11px; }
-  .career-list li
+  .career-list li { grid-template-columns: 1fr; gap: 20px; }
   .career-media { height: 260px; }
   .footer-arrow { width: 52px; height: 52px; flex-shrink: 0; }
   .footer-main h2 { font-size: 30px; }
