@@ -1,8 +1,7 @@
 import { useEffect, useMemo, useState } from 'react';
 import AutoScroll from 'embla-carousel-auto-scroll';
-import { Pause, Play } from 'lucide-react';
 import { Button } from '@/components/ui/button';
-import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious, type CarouselApi } from '@/components/ui/carousel';
+import { Carousel, CarouselContent, CarouselItem, type CarouselApi } from '@/components/ui/carousel';
 import { projects, skills } from '@/lib/portfolio';
 
 function useReducedMotion() {
@@ -27,25 +26,19 @@ export function WorkSequence({ renderProject }: { renderProject: (project: typeo
 
 export function SkillsCarousel() {
   const reduced = useReducedMotion();
-  const [paused, setPaused] = useState(false);
   const [api, setApi] = useState<CarouselApi>();
   const plugins = useMemo(() => [AutoScroll({ speed: 0.6, startDelay: 400, playOnInit: false, stopOnInteraction: false, stopOnMouseEnter: true, stopOnFocusIn: true })], []);
   useEffect(() => {
     const motion = api?.plugins().autoScroll;
     if (!motion) return;
-    if (reduced || paused) motion.stop();
+    if (reduced) motion.stop();
     else motion.play();
-  }, [api, reduced, paused]);
+  }, [api, reduced]);
 
-  const resume = () => { if (!reduced && !paused) api?.plugins().autoScroll?.play(); };
+  const resume = () => { if (!reduced) api?.plugins().autoScroll?.play(); };
   return <Carousel setApi={setApi} plugins={plugins} opts={{ align: 'start', loop: true, slidesToScroll: 1 }} aria-label="Skills carousel" className="stack-wrap" onMouseLeave={resume} onBlurCapture={(event) => { if (!event.currentTarget.contains(event.relatedTarget)) resume(); }}>
     <div className="stack-top">
       <p className="stack-title"><strong>My stack.</strong> Tools I use to build and keep systems running.</p>
-      <div className="carousel-controls">
-        {!reduced && <Button variant="outline" size="icon" className="h-8 w-8 rounded-full" title={paused ? 'Play skills animation' : 'Pause skills animation'} aria-label={paused ? 'Play skills animation' : 'Pause skills animation'} onClick={() => setPaused(!paused)}>{paused ? <Play size={14} /> : <Pause size={14} />}</Button>}
-        <CarouselPrevious title="Previous skill" aria-label="Previous skill" className="static translate-x-0 translate-y-0 h-8 w-8" />
-        <CarouselNext title="Next skill" aria-label="Next skill" className="static translate-x-0 translate-y-0 h-8 w-8" />
-      </div>
     </div>
     <CarouselContent className="-ml-2">{skills.map((skill) => <CarouselItem key={skill} className="basis-auto pl-2"><span className="stack-chip">{skill}</span></CarouselItem>)}</CarouselContent>
   </Carousel>;

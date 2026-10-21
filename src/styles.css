@@ -173,7 +173,6 @@ h2 { font-size: 48px; line-height: 1.12; }
 .stack-top { display: flex; align-items: center; justify-content: space-between; gap: 24px; margin-bottom: 20px; }
 .stack-title { color: var(--muted-foreground); }
 .stack-title strong { color: var(--primary); font-weight: 500; }
-.carousel-controls { display: flex; gap: 8px; }
 .stack-chip { display: inline-flex; align-items: center; gap: 9px; border: 1px solid var(--border); border-radius: 999px; padding: 7px 15px; font-size: 12px; white-space: nowrap; color: var(--muted-foreground); }
 .stack-chip::before { content: ""; width: 5px; height: 5px; border-radius: 50%; background: var(--primary); flex-shrink: 0; }
 .stack-chip:hover { color: var(--foreground); border-color: var(--primary); }
