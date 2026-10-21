@@ -54,12 +54,14 @@ export const projects = [
   },
 ];
 
-export const skills = [...new Set([...career.flatMap((entry) => entry.skills), ...projects.flatMap((entry) => entry.skills ?? [])])];
+const extraSkills = ["APIs", "React", "Azure Database"];
+
+export const skills = [...new Set([...career.flatMap((entry) => entry.skills), ...projects.flatMap((entry) => entry.skills ?? []), ...extraSkills])];
 
 const skillGroupDefinitions = [
-  { name: "Backend", tools: ["C#", "VB.NET", "Entity Framework", "Dapper"] },
-  { name: "Frontend", tools: ["JavaScript", "jQuery", "HTML", "CSS"] },
-  { name: "Data", tools: ["SQL Server", "PostgreSQL"] },
+  { name: "Backend", tools: ["C#", "VB.NET", "Entity Framework", "Dapper", "APIs"] },
+  { name: "Frontend", tools: ["JavaScript", "jQuery", "HTML", "CSS", "React"] },
+  { name: "Data", tools: ["SQL Server", "PostgreSQL", "Azure Database"] },
   { name: "Automation", tools: ["Selenium", "Browser automation"] },
   { name: "Mobile", tools: [".NET MAUI", "Google Firebase"] },
   { name: "Cloud & DevOps", tools: ["Azure DevOps", "CI/CD"] },
