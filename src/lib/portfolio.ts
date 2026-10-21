@@ -24,7 +24,7 @@ export const services = [
 export const career = [
   { company: "Automate", period: "Apr 2022 — Aug 2024", image: automateImage, imageAlt: "Automate team gathering", imageKind: "photo", role: "Full-stack Web and APIs Development", text: "A startup focused on automating Microsoft product sales and developing an ERP with multi-store integration. I worked as a full-stack developer, handling all stages of ERP web system development — from front-end to back-end, implementation, maintenance, system optimization, and post-implementation testing.", skills: ["C#", "JavaScript", "jQuery", "HTML", "CSS", "SQL Server", "Azure DevOps", "Entity Framework"] },
   { company: "SmarterApp", period: "Oct 2024 — Feb 2026", image: smarterappImage, imageAlt: "Rapiduu mobile application sign-in screen from my work at SmarterApp", imageKind: "app", role: "Full-stack Software Engineering", text: "A hub for custom software tailored to each client's requirements. My experience went beyond web e-commerce and CRM applications: I developed AI-based software from scratch, built APIs, and created mobile applications designed entirely around each client's needs.", skills: ["C#", "JavaScript", "HTML", "CSS", "SQL Server", "Azure DevOps", "Dapper", "VB.NET", ".NET MAUI", "PostgreSQL", "CI/CD", "Google Firebase"] },
-  { company: "ADP", period: "Dec 2025 — Present", image: adpImage, imageAlt: "ADP team group selfie outdoors", imageKind: "photo", role: "RPA Development & Backend Automation", text: "A multinational and global leader in payroll and human resources solutions. I had the opportunity to work with RPA (Robotic Process Automation), creating robots from scratch using C# and Selenium to replace manual work with efficiency and speed. I also maintained production robots, investigated automation failures, and worked with SQL Server throughout development and maintenance.", skills: ["C#", "JavaScript", "HTML", "Selenium", "Browser automation", "Entity Framework", "SQL Server"] },
+  { company: "ADP", period: "Dec 2025 — Present", image: adpImage, imageAlt: "ADP team group selfie outdoors", imageKind: "photo", role: "RPA Development & Backend Automation", text: "A multinational and global leader in payroll and human resources solutions. I had the opportunity to work with RPA (Robotic Process Automation), creating robots from scratch using C# and Selenium to replace manual work with efficiency and speed. I also maintained production robots, investigated automation failures, and worked with SQL Server throughout development and maintenance.", skills: ["C#", "JavaScript", "HTML", "Selenium", "Browser automation", "Entity Framework", "SQL Server", "Claude", "Copilot"] },
 ];
 
 export const projects = [
@@ -63,7 +63,7 @@ const skillGroupDefinitions = [
   { name: "Automation", tools: ["Selenium", "Browser automation"] },
   { name: "Mobile", tools: [".NET MAUI", "Google Firebase"] },
   { name: "Cloud & DevOps", tools: ["Azure DevOps", "CI/CD"] },
-  { name: "AI", tools: ["Azure AI"] },
+  { name: "AI", tools: ["Azure AI", "Claude", "Copilot"] },
 ];
 
 const groupedTools = skillGroupDefinitions.flatMap((group) => group.tools);
